@@ -216,6 +216,7 @@ def plotNodeComponents(dictframe, column, holidays = None, uncertainty=False, pl
     nodeToPlot = dictframe[column]
     colNames = nodeToPlot.columns.tolist()
     trend = "trend" in colNames
+    holiday = False
     if holidays is not None:
         holiday = np.any(holidays.holiday[0] in colNames)
     weekly = "weekly" in colNames
